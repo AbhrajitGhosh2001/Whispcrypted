@@ -1,21 +1,13 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +16,47 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.messages p {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: inline-block;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.message-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.message-form input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.message-form button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.message-form button:hover {
+  background-color: #0056b3;
 }
